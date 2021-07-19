@@ -3,7 +3,7 @@ from sklearn.preprocessing import LabelEncoder
 import numpy as np
 from sklearn import linear_model
 def getClasificador():
-    data = pd.read_csv("./aluguel.csv")
+    data = pd.read_csv("./util/aluguel.csv")
     mapping = LabelEncoder()
     data["cidade_Map"] = mapping.fit_transform(data["cidade"])
     remover = ['cidade',"aluguel",'total']
@@ -15,4 +15,5 @@ def getClasificador():
     return clf.fit(x,y)
 
 def getPreticao(dados):
-    return getClasificador().predict(dados)[0]
+    return getClasificador().predict([dados])[0]
+

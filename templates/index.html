@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
     <title>Aluguel</title>
 </head>
 <body>
@@ -13,11 +13,11 @@
         <h1 class="title">Calculador de Aluguel</h1>
     </div>
     <div class="div_form">
-        <form action="" method="POST" class="formullario">
+        <form action="{{ url_for('predict')}}" method="POST" class="formullario">
             <div class="campos">
                 <div class="left">
                     <label for="cidade">Escolha a cidade</label>
-                    <select name="" id="">
+                    <select name="cidade">
                         <option value="nda">Escolha uma cidade</option>
                         <option value="0">Belo Horizonte</option>
                         <option value="1">Campinas</option>
@@ -37,10 +37,20 @@
                 <div class="rigth">
                     <label for="andar">Andar:</label>
                     <input type="text" name="andar">
-                    <label for="animais">Aceita animais? </label>
-                    <input type="checkbox" name="animais">
-                    <label for="mobiliado">É mobiliado? </label>
-                    <input type="checkbox" name="mobiliado">
+                    <div>
+                        <p>Aceita animais</p>
+                        <input type="radio" id="sima" name="animais" value="1">
+                        <label for="sima">sim </label>
+                        <input type="radio" id="naoa" name="animais" value="0" checked>
+                        <label for="naoa">não </label>
+                    </div>
+                    <div>
+                        <p>É mobiliado?</p>
+                        <input type="radio" id="sim" name="mobiliado" value="1">
+                        <label for="sim">sim </label>
+                        <input type="radio" id="nao" name="mobiliado" value="0" checked>
+                        <label for="nao">não </label>
+                    </div>                                       
                     <label for="condominio">Valor do condominio em R$</label>
                     <input type="text" name="condominio">
                     <label for="iptu">Valor do iptu (mensal) em R$</label>
@@ -48,14 +58,14 @@
                 </div>
             </div>
             <div class="botoes">
-                <button type="submit" class="btn_ok"><span class="fas fa-plus"></span></button>
                 <button type="reset" class="btn_limpa"><span class="fas fa-trash-alt"></span></button>
+                <button type="submit" class="btn_ok"><span class="fas fa-plus"></span></button>
             </div>
         </form>
     </div>
     <div class="resultado">
         <h1>Aluguel previsto</h1>
-        <h2>aqui vai aparecer o valor</h2>
+        <h2>{{ prediction_text }}</h2>
     </div>
 </body>
 </html>
