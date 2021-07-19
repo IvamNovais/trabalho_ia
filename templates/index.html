@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Aluguel</title>
+</head>
+<body>
+    <div class="title_container">
+        <h1 class="title">Calculador de Aluguel</h1>
+    </div>
+    <div class="div_form">
+        <form action="" method="POST" class="formullario">
+            <div class="campos">
+                <div class="left">
+                    <label for="cidade">Escolha a cidade</label>
+                    <select name="" id="">
+                        <option value="nda">Escolha uma cidade</option>
+                        <option value="0">Belo Horizonte</option>
+                        <option value="1">Campinas</option>
+                        <option value="2">Porto Alegre</option>
+                        <option value="3">Rio de Janeiro</option>
+                        <option value="4">São Paulo</option>
+                    </select>
+                    <label for="area">Área do imóvel (m2)</label>
+                    <input type="text" name="area">
+                    <label for="quartos">Quantidade de quartos:</label>
+                    <input type="text" name="quartos">
+                    <label for="banheiros">Banheiros:</label>
+                    <input type="text" name="banheiros">
+                    <label for="garagem">Vagas na garagem:</label>
+                    <input type="text" name="garagem">
+                </div>
+                <div class="rigth">
+                    <label for="andar">Andar:</label>
+                    <input type="text" name="andar">
+                    <label for="animais">Aceita animais? </label>
+                    <input type="checkbox" name="animais">
+                    <label for="mobiliado">É mobiliado? </label>
+                    <input type="checkbox" name="mobiliado">
+                    <label for="condominio">Valor do condominio em R$</label>
+                    <input type="text" name="condominio">
+                    <label for="iptu">Valor do iptu (mensal) em R$</label>
+                    <input type="text" name="iptu">
+                </div>
+            </div>
+            <div class="botoes">
+                <input type="submit" class="btn_ok">
+                <input type="reset" class="btn_limpa">
+            </div>
+        </form>
+    </div>
+    <div class="resultado">
+        <h1>Aluguel previsto</h1>
+        <h2>aqui vai aparecer o valor</h2>
+    </div>
+</body>
+</html>

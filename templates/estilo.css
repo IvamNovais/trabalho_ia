@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title_container{
+    width: 90vw;
+    height: 10vh;
+    padding-top: .5rem;
+}
+.formullario{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+.div_form{
+    height: 70;
+    width: 40vw;
+    padding: .5rem;
+    border: .1rem solid black;
+    border-radius: .5rem;
+}
+.campos{
+    display: flex;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.left{
+    width:  35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rigth{
+    width: 35%;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input{
+    padding: .2rem;
+    margin-bottom: .3rem;
+}
+select{
+    padding: .2rem;
+    margin-bottom: .3rem;
+}
+.botoes{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.btn_ok{
+    width: 30%;
+    height: 2rem;
+    background-color: rgb(34, 241, 34);
+    border-radius: .5rem;
+}
+.btn_limpa{
+    width: 30%;
+    height: 2rem;
+    background-color: red;
+    border-radius: .5rem;
+}
+.resultado{
+    margin-top: .3rem;
+    height: 15%;
+    padding: .3rem;
+    width: 70%;
+    border: .1rem solid black;
+    border-radius: 1rem;
+}
+.resultado h2{
+    text-align: center;
+}
