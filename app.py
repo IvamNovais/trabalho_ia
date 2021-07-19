@@ -12,4 +12,5 @@ def predict():
     for coisa in dados:
         dadosf.append(float(dados.get(coisa)))
     saida = clasificadores.getPreticao(dadosf)
+    saida = "{:.2f}".format(saida).replace(".",",")
     return render_template("index.html", prediction_text=saida)
