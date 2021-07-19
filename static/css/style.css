@@ -77,11 +77,11 @@ select{
 }
 .resultado{
     margin-top: .3rem;
-    height: 15%;
     padding: .3rem;
     width: 70%;
     border: .1rem solid black;
     border-radius: 1rem;
+    min-height: 15%;
 }
 
 .resultado h2{
