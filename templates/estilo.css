@@ -62,16 +62,18 @@ select{
     justify-content: space-around;
 }
 .btn_ok{
-    width: 30%;
+    width: 3rem;
     height: 2rem;
     background-color: rgb(34, 241, 34);
-    border-radius: .5rem;
+    border-radius: 3rem;
+    border: none;
 }
 .btn_limpa{
-    width: 30%;
+    width: 3rem;
     height: 2rem;
     background-color: red;
-    border-radius: .5rem;
+    border-radius: 3rem;
+    border: none;
 }
 .resultado{
     margin-top: .3rem;
